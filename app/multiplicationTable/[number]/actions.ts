@@ -3,6 +3,7 @@ export async function validateMultiplicationTable(
 	formData: FormData
 ) {
 	try {
+		console.log('here')
 		const numArray: Array<Array<Number>> = [];
 		const ansArray: Array<Array<Number>> = [];
 		const correctnessArray: Array<Array<Boolean>> = [];
@@ -22,7 +23,6 @@ export async function validateMultiplicationTable(
 				ansArray[i].push(i * j);
 			}
 		}
-		console.log(ansArray);
 		for (const pair of multiplicationTableEntries) {
 			const split = pair[0].split("-");
 			numArray[Number(split[0])][Number(split[1])] = Number(pair[1]);
@@ -37,7 +37,7 @@ export async function validateMultiplicationTable(
 				}
 			}
 		}
-		console.log(userCorrect, correctnessArray);
+        return {userCorrect, correctnessArray}
 	} catch (e) {
 		return { message: "Failed to check multiplication table" };
 	}
