@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col p-12 bg-[#0D743D]">
 			<div className="flex flex-col items-center justify-center">
-				<div className="text-5xl">Kenzie's Pizza Party</div>
+				<div className="text-5xl">Kenzie&apos;s Pizza Party</div>
 			</div>
 			<div className="flex gap-8">
 				<div className="flex flex-col gap-2">
