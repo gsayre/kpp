@@ -26,7 +26,7 @@ export function MultiplicationTable({ gridSize }: { gridSize: number }) {
 	);
 
 	return (
-		<div>
+		<>
 			<form action={formAction} className="flex flex-col gap-4">
 				<div className="flex h-fit">
 					{Array.from(Array(gridSize + 1).keys()).map((row, idx) => {
@@ -65,6 +65,6 @@ export function MultiplicationTable({ gridSize }: { gridSize: number }) {
 					{gridSize > 0 && <SubmitButton />}
 				</div>
 			</form>
-		</div>
+		</>
 	);
 }
