@@ -2,8 +2,8 @@ import { useFormState, useFormStatus } from "react-dom";
 import { validateMultiplicationTable } from "./actions";
 
 const initialState = {
-    message: null
-}
+	message: null,
+};
 
 function SubmitButton() {
 	const { pending } = useFormStatus();
@@ -33,7 +33,7 @@ export function MultiplicationTable({ gridSize }: { gridSize: number }) {
 						<div className="flex flex-col">
 							{Array.from(Array(gridSize + 1).keys()).map((col) => {
 								return (
-									<>
+									<div key={row + "-" + col}>
 										{row === 0 && col !== 0 ? (
 											<div className="w-20 h-16 flex justify-center items-center text-2xl font-semibold text-white">
 												{col}
@@ -53,7 +53,7 @@ export function MultiplicationTable({ gridSize }: { gridSize: number }) {
 												/>
 											</div>
 										)}
-									</>
+									</div>
 								);
 							})}
 						</div>
